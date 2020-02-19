@@ -9,7 +9,7 @@ while iterador == "1":
     auxEdad += edad
 
     if edad > 18:
-        promEdad =  auxEdad / contE
+        promEdad =  (auxEdad-edad )/ contE
         print("El promedio de edad es de: "+str(promEdad))
     
 
