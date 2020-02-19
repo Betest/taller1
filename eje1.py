@@ -8,15 +8,18 @@ while iterador == "1":
     edad = int(input("Ingrese la edad: "))
     auxEdad += edad
 
-    if edad > 18:
-        promEdad =  (auxEdad-edad )/ contE
+    if edad > 18 :
+        if contE > 0:
+            promEdad =  (auxEdad-edad )/ contE
         print("El promedio de edad es de: "+str(promEdad))
+        break       
     
 
     contE+=1
 
     iterador = input("Desea seguir ejecutando el programa? 1 para continuar, 2 para terminar: ")
 
-promEdad = auxEdad / contE
+if contE > 0:
+    promEdad = auxEdad / contE
 
 print("El promedio de edad es de: "+str(promEdad))
