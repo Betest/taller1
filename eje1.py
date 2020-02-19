@@ -2,18 +2,21 @@ edad =""
 promEdad = 0
 contE = 0
 auxEdad  = 0
-iterador = True
+iterador = "1"
 
-while(iterador){
-    edad = input("Ingrese la edad")
+while iterador == "1":
+    edad = int(input("Ingrese la edad: "))
+    auxEdad += edad
 
-    if(edad>18){
-        promEdad= contE / auxEdad
-        print("El promedio de edad es de: "+promEdad)
-    }
+    if edad > 18:
+        promEdad =  auxEdad / contE
+        print("El promedio de edad es de: "+str(promEdad))
+    
 
     contE+=1
 
-    iterador = input("Desea seguir ejecutando el programa? aceptar para continuar, cancelar para terminar")    
+    iterador = input("Desea seguir ejecutando el programa? 1 para continuar, 2 para terminar: ")
 
-}
+promEdad = auxEdad / contE
+
+print("El promedio de edad es de: "+str(promEdad))
