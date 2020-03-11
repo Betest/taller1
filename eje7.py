@@ -3,16 +3,25 @@ list1 = ['a','a','a','b','c','a','d','a']
 #for i in range (0,len(list1)):
 #    if list1[i]=='a':
 #        del list1[i]
-cont =0
-numero= "8978"
+i=0
+while i< len(list1):
+    if list1[i] == 'a':
+        del list1[i]
+    else:
+        i+=1
 
-for i in range(0,len(numero)):
-    for j in range(0,len(numero)):
-        if j+1 > len(numero):
+print(list1)
+
+cont = 0
+palabra= 'holo'
+
+for i in range(0,len(palabra)):
+    for j in range(0,len(palabra)):
+        if j+1 > len(palabra):
             break
-        if numero[i]==numero[j+1]:
+        if palabra[i]==palabra[j+1]:
             cont+=1
     if cont>0:
         break
 
-print('numero menor'+str(cont))
+print('hay alguna repetida'+str(cont))
